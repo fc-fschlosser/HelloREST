@@ -36,7 +36,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>eu.fincon.hellorest.service.HelloApplication</mainClass>
+                  <mainClass>eu.fincon.hellorest.service.HelloRestApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>

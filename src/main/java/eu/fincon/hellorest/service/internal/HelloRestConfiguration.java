@@ -10,7 +10,7 @@ public class HelloRestConfiguration extends Configuration {
     private String template;
 
     @NotEmpty
-    private String defaultName = "Stranger";
+    private String defaultName = "Nobody";
 
     @JsonProperty
     public String getTemplate() {

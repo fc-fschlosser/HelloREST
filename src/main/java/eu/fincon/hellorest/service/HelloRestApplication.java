@@ -15,7 +15,7 @@ public class HelloRestApplication extends Application<HelloRestConfiguration> {
 
 	@Override
 	public String getName() {
-		return "hello-world";
+		return "helloREST";
 	}
 
 	@Override

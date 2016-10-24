@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.Optional;
 
-@Path("/hello-world")
+@Path("/helloREST")
 @Produces(MediaType.APPLICATION_JSON)
 public class HelloRestEndpoint {
 	
