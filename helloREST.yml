@@ -1,2 +1,8 @@
 template: Hello, %s!
 defaultName: Nobody
+
+# Port
+server:
+  applicationConnectors:
+    - type: http
+      port: 8082
