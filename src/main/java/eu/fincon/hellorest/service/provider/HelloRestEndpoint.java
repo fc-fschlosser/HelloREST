@@ -2,7 +2,7 @@ package eu.fincon.hellorest.service.provider;
 
 import com.codahale.metrics.annotation.Timed;
 
-import eu.fincon.hellorest.service.internal.Saying;
+import eu.fincon.hellorest.service.internal.HelloRestResponse;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @Path("/hello-world")
 @Produces(MediaType.APPLICATION_JSON)
-public class HelloEndpoint {
+public class HelloRestEndpoint {
 	
     private final String template;
     private final String defaultName;
     private final AtomicLong counter;
 
-    public HelloEndpoint(String template, String defaultName) {
+    public HelloRestEndpoint(String template, String defaultName) {
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
@@ -28,8 +28,8 @@ public class HelloEndpoint {
 
     @GET
     @Timed
-    public Saying sayHello(@QueryParam("name") Optional<String> name) {
+    public HelloRestResponse sayHello(@QueryParam("name") Optional<String> name) {
         final String value = String.format(template, name.orElse(defaultName));
-        return new Saying(counter.incrementAndGet(), value);
+        return new HelloRestResponse(counter.incrementAndGet(), value);
     }
 }

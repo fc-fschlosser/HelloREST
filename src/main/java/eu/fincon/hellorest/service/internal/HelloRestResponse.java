@@ -3,18 +3,18 @@ package eu.fincon.hellorest.service.internal;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;
 
-public class Saying {
+public class HelloRestResponse {
 
     private long id;
 
     @Length(max = 3)
     private String content;
 
-    public Saying() {
+    public HelloRestResponse() {
         // Jackson deserialization
     }
 
-    public Saying(long id, String content) {
+    public HelloRestResponse(long id, String content) {
         this.id = id;
         this.content = content;
     }
